@@ -10,7 +10,11 @@
     "build": "turbo run build",
     "dev": "turbo run dev --parallel",
     "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "typecheck": "turbo run typecheck",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "prettier:check": "prettier --check \"**/*.{ts,tsx,md}\"",
+    "prettier:fix": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "check:ci": "pnpm run typecheck && pnpm run lint && pnpm run prettier:check && pnpm run build"
   },
   "devDependencies": {
     "eslint-config-custom": "workspace:*",
