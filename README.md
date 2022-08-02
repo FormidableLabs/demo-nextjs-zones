@@ -1,77 +1,33 @@
-# Turborepo starter with pnpm
+# Microfrontends: NextJS Zones
 
-This is an official starter turborepo.
+This repo is an exploration of microfrontends using [NextJS Zones](https://nextjs.org/docs/advanced-features/multi-zones).
 
-## What's inside?
+The general idea is:
 
-This turborepo uses [pnpm](https://pnpm.io) as a packages manager. It includes the following packages/apps:
+- Use [TurboRepo](https://turborepo.org/) to manage a monorepo with multiple NextJS apps and a shared component library.
+- The monorepo will have multiple distinct NextJS apps that will be “stitched” together using [NextJS Zone](https://nextjs.org/docs/advanced-features/multi-zones)s.
+- We will have a shared component library that can be used by any of the NextJS apps (to showcase TurboRepo’s monorepo goodness).
+- We will deploy each NextJS app individually to Vercel, and then use Zones to stitch them together.
 
-### Apps and Packages
+## Steps/Tickets to create:
 
-- `docs`: a [Next.js](https://nextjs.org) app
-- `web`: another [Next.js](https://nextjs.org) app
-- `ui`: a stub React component library shared by both `web` and `docs` applications
-- `eslint-config-custom`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `tsconfig`: `tsconfig.json`s used throughout the monorepo
+- Repo setup:
+  - TurboRepo with pnpm? And sample NextJS app
+  - Setup baseline NextJS apps and shared component library. Make sure we can import component library into any of the apps.
+  - Prettier/TypeScript with CI job to run checks across all of our packages/apps.
+- Deployment:
+  - Vercel deployment for each of the apps.
+  - NextJS Zones setup
+- Application development:
+  - Some baseline shared components
+  - Public landing site – basic lander, about page, pricing page.
+  - Client application page – two pages (todo…)
+  - Admin dashboard:
+    - Auth setup
+    - A few pages to manage data.
 
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
+## References
 
-### Utilities
-
-This turborepo has some additional tools already setup for you:
-
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
-
-## Setup
-
-This repository is used in the `npx create-turbo@latest` command, and selected when choosing which package manager you wish to use with your monorepo (pnpm).
-
-### Build
-
-To build all apps and packages, run the following command:
-
-```
-cd my-turborepo
-pnpm run build
-```
-
-### Develop
-
-To develop all apps and packages, run the following command:
-
-```
-cd my-turborepo
-pnpm run dev
-```
-
-### Remote Caching
-
-Turborepo can use a technique known as [Remote Caching](https://turborepo.org/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
-
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup), then enter the following commands:
-
-```
-cd my-turborepo
-pnpx turbo login
-```
-
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
-
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your turborepo:
-
-```
-pnpx turbo link
-```
-
-## Useful Links
-
-Learn more about the power of Turborepo:
-
-- [Pipelines](https://turborepo.org/docs/core-concepts/pipelines)
-- [Caching](https://turborepo.org/docs/core-concepts/caching)
-- [Remote Caching](https://turborepo.org/docs/core-concepts/remote-caching)
-- [Scoped Tasks](https://turborepo.org/docs/core-concepts/scopes)
-- [Configuration Options](https://turborepo.org/docs/reference/configuration)
-- [CLI Usage](https://turborepo.org/docs/reference/command-line-reference)
+- [NextJS Zones](https://nextjs.org/docs/advanced-features/multi-zones)
+- [Vercel Monorepo support](https://vercel.com/blog/monorepos)
+- [Vercel `with-zones` example](https://github.com/vercel/next.js/tree/canary/examples/with-zones)
