@@ -16,6 +16,7 @@
     "react-dom": "18.2.0"
   },
   "devDependencies": {
+    "@mfezones/eslint-config-custom": "workspace:^0.0.0",
     "@mfezones/tsconfig": "workspace:^0.0.0",
     "@types/node": "^17.0.12",
     "@types/react": "18.0.15",
