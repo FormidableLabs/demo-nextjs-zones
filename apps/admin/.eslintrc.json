@@ -1,0 +1,3 @@
+{
+  "extends": "@mfezones/eslint-config-custom"
+}

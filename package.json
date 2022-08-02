@@ -17,7 +17,7 @@
     "check:ci": "pnpm run typecheck && pnpm run lint && pnpm run prettier:check && pnpm run build"
   },
   "devDependencies": {
-    "eslint-config-custom": "workspace:*",
+    "@mfezones/eslint-config-custom": "workspace:^0.0.0",
     "prettier": "latest",
     "turbo": "latest"
   },
@@ -25,6 +25,5 @@
     "npm": ">=7.0.0",
     "node": ">=14.0.0"
   },
-  "dependencies": {},
   "packageManager": "pnpm@7.4.1"
 }
