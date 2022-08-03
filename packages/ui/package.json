@@ -9,12 +9,17 @@
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
+    "@mfezones/eslint-config-custom": "workspace:*",
+    "@mfezones/tsconfig": "workspace:*",
     "@types/react": "^17.0.37",
     "@types/react-dom": "^17.0.11",
     "eslint": "^7.32.0",
-    "@mfezones/eslint-config-custom": "workspace:*",
     "react": "^17.0.2",
-    "@mfezones/tsconfig": "workspace:*",
     "typescript": "^4.5.2"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.10.0",
+    "@emotion/styled": "^11.10.0",
+    "@mui/material": "^5.9.3"
   }
 }
