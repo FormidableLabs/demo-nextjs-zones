@@ -11,8 +11,8 @@
   "devDependencies": {
     "@mfezones/eslint-config-custom": "workspace:*",
     "@mfezones/tsconfig": "workspace:*",
-    "@types/react": "^17.0.37",
-    "@types/react-dom": "^17.0.11",
+    "@types/react": "^18.0.15",
+    "@types/react-dom": "^18.0.6",
     "eslint": "^7.32.0",
     "react": "^17.0.2",
     "typescript": "^4.5.2"
