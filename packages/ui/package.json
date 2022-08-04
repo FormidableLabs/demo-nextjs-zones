@@ -6,7 +6,8 @@
   "license": "MIT",
   "scripts": {
     "lint": "eslint *.ts*",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "build": "tsc"
   },
   "devDependencies": {
     "@mfezones/eslint-config-custom": "workspace:*",
