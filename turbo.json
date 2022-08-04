@@ -14,5 +14,6 @@
     "typecheck": {
       "outputs": []
     }
-  }
+  },
+  "globalDependencies": [".env"]
 }

@@ -1,6 +1,13 @@
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
-import { themes, ThemeProvider, CssBaseLine, Paper, Nav } from "@mfezones/ui";
+import {
+  themes,
+  ThemeProvider,
+  CssBaseLine,
+  Paper,
+  Nav,
+  Container,
+} from "@mfezones/ui";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -8,7 +15,9 @@ function MyApp({ Component, pageProps }: AppProps) {
       <CssBaseLine />
       <Paper elevation={0}>
         <Nav />
-        <Component {...pageProps} />
+        <Container>
+          <Component {...pageProps} />
+        </Container>
       </Paper>
     </ThemeProvider>
   );
