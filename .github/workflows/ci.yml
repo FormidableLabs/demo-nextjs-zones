@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [ 16.x, 18.x ]
+        node-version: [16.x, 18.x]
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
@@ -51,3 +51,6 @@ jobs:
 
       - name: Build packages/apps (Node ${{ matrix.node-version }})
         run: pnpm run build
+
+      - name: Build Storybook
+        run: pnpm --filter ui build-storybook
