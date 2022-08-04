@@ -24,7 +24,7 @@ The general idea is:
   - Client application page – two pages (todo…)
   - Admin dashboard:
     - Auth setup
-    - A few pages to manage data.
+    - A few pages to manage data..
 
 ## References
 
