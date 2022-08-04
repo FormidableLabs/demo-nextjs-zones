@@ -1,7 +1,7 @@
 import * as React from "react";
-export * from "./Button";
+export * from "./components/Button/Button";
 export * from "./themes";
-export * from "./ThemeProvider";
-export * from "./CssBaseLine";
-export * from "./Paper";
-export * from "./Nav";
+export * from "./themes/ThemeProvider";
+export * from "./components/CssBaseLine/CssBaseLine";
+export * from "./components/Paper/Paper";
+export * from "./components/Nav/Nav";
