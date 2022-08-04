@@ -8,13 +8,24 @@ import {
   Nav,
   Container,
 } from "@mfezones/ui";
-
+import Link from "next/link";
+import getConfig from "next/config";
 function MyApp({ Component, pageProps }: AppProps) {
+  console.log(getConfig());
   return (
     <ThemeProvider theme={themes.public}>
       <CssBaseLine />
       <Paper elevation={0}>
-        <Nav />
+        <Nav
+          renderLink={({ children, url }) => (
+            <Link
+              passHref
+              href={`${getConfig().publicRuntimeConfig.basePaths.public}${url}`}
+            >
+              {children}
+            </Link>
+          )}
+        />
         <Container>
           <Component {...pageProps} />
         </Container>
