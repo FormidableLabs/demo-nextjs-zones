@@ -4,7 +4,7 @@ const { CLIENT_URL, ADMIN_URL, PUBLIC_URL, NEXT_PUBLIC_VERCEL_URL, ENV } =
 const baseUrl =
   ENV === "local" ? PUBLIC_URL : "https://" + NEXT_PUBLIC_VERCEL_URL;
 
-/** @type {import('next').NextConfig} */
+/** @type {import('next').NextConfig}  */
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
