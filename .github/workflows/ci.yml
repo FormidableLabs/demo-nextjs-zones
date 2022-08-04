@@ -51,6 +51,3 @@ jobs:
 
       - name: Build packages/apps (Node ${{ matrix.node-version }})
         run: pnpm run build
-
-      - name: Build Storybook
-        run: pnpm --filter ui build-storybook
