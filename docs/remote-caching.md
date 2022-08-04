@@ -22,7 +22,7 @@ To verify `rm -rf ./node_modules/.cache/turbo` then run
 
 This will execute `turbo build` which will check both your local and remote cache. We deleted the local cache in node_modules so itll attempt to go vercel for any build artifacts.
 
-You should see messages like this
+You should see messages like this:
 
 `@mfezones/admin:build: cache hit, replaying output ea3e3a4e6f9bc2e0`
 
