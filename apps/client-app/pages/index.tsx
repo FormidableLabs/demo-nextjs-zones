@@ -2,7 +2,6 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import { Button } from "@mfezones/ui";
-import Link from "next/link";
 
 const Home: NextPage = () => {
   return (
@@ -20,9 +19,6 @@ const Home: NextPage = () => {
         <Button href="" variant="contained">
           Client button!
         </Button>
-
-        <Link href="../">Back...</Link>
-        <a href="../">BACK MORE?</a>
       </main>
 
       <footer>
