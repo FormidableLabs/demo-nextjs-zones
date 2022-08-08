@@ -1,13 +1,13 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
-import { Paper as MuiPaper } from "./Paper";
+import { Paper as PaperComponent } from "./Paper";
 
 export default {
   title: "Base Component/Paper",
-  component: MuiPaper,
-} as ComponentMeta<typeof MuiPaper>;
+  component: PaperComponent,
+} as ComponentMeta<typeof PaperComponent>;
 
-const Template: ComponentStory<typeof MuiPaper> = (args) => (
-  <MuiPaper {...args} />
+const Template: ComponentStory<typeof PaperComponent> = (args) => (
+  <PaperComponent {...args} />
 );
 
 export const Paper = Template.bind({});
