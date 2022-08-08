@@ -1,26 +1,25 @@
 import * as React from "react";
 import { AppBar as MuiAppBar, Box, Button, MenuItem } from "@mui/material";
-import Link from "next/link";
-import { useRouter } from "next/router";
 
-export const Nav = () => {
-  const basePath = useRouter().basePath;
+type BasePath = "" | "/app" | "/admin";
+export type NavProps = {
+  renderLink: (linkProps: {
+    url: string;
+    children: React.ReactNode;
+    basePath: BasePath;
+  }) => React.ReactNode;
+};
 
+export const Nav = ({ renderLink }: NavProps) => {
   return (
     <MuiAppBar component="nav" position="sticky" sx={{ p: 2 }}>
       <Box>
-        {PATHS.map((path) => {
-          const buttonEl = <Button variant="contained">{path.title}</Button>;
-
-          return path.basePath === basePath ? (
-            <Link href={path.href} key={path.href} passHref>
-              {buttonEl}
-            </Link>
-          ) : (
-            <a href={path.href} key={path.href}>
-              {buttonEl}
-            </a>
-          );
+        {PATHS.map(({ href, title, basePath }) => {
+          return renderLink({
+            url: href,
+            children: <Button variant="contained">{title}</Button>,
+            basePath,
+          });
         })}
       </Box>
     </MuiAppBar>
@@ -30,7 +29,7 @@ export const Nav = () => {
 const PATHS: {
   href: string;
   title: string;
-  basePath: "" | "/app" | "/admin";
+  basePath: BasePath;
 }[] = [
   { href: "/", title: "Home", basePath: "" },
   { href: "/about/", title: "About", basePath: "" },
