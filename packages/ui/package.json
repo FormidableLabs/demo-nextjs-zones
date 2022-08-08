@@ -34,6 +34,8 @@
     "@emotion/react": "^11.10.0",
     "@emotion/styled": "^11.10.0",
     "@mui/material": "^5.9.3",
-    "storybook": "^6.5.10"
+    "storybook": "^6.5.10",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
   }
 }

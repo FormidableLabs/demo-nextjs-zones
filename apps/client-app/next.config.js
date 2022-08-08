@@ -4,6 +4,7 @@ const withTM = require("next-transpile-modules")(["@mfezones/ui"]);
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
+  basePath: "/app",
 };
 
 module.exports = withTM(nextConfig);
