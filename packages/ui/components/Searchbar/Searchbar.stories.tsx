@@ -7,7 +7,7 @@ export default {
 } as ComponentMeta<typeof SearchbarComponent>;
 
 const Template: ComponentStory<typeof SearchbarComponent> = (args) => (
-  <Searchbar {...args} />
+  <SearchbarComponent {...args} />
 );
 
 export const Searchbar = Template.bind({});

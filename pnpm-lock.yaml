@@ -126,6 +126,7 @@ importers:
       '@emotion/styled': ^11.10.0
       '@mfezones/eslint-config-custom': workspace:*
       '@mfezones/tsconfig': workspace:*
+      '@mui/icons-material': ^5.8.4
       '@mui/material': ^5.9.3
       '@storybook/addon-actions': ^6.5.10
       '@storybook/addon-essentials': ^6.5.10
@@ -146,6 +147,7 @@ importers:
     dependencies:
       '@emotion/react': 11.10.0_dekd3qhq25os2zmp2sxj6oaoou
       '@emotion/styled': 11.10.0_cvyjuqpqzsw2jroi6znapo3uiq
+      '@mui/icons-material': 5.8.4_x6czzi3axj3g3crkmdh4a3wnjy
       '@mui/material': 5.9.3_ihaomijnambxwtysddndddrzzy
       storybook: 6.5.10_2ublxohjeq6dcfcmdio5giexom
     devDependencies:
@@ -1944,6 +1946,23 @@ packages:
       prop-types: 15.8.1
       react: 18.2.0
       react-is: 18.2.0
+    dev: false
+
+  /@mui/icons-material/5.8.4_x6czzi3axj3g3crkmdh4a3wnjy:
+    resolution: {integrity: sha512-9Z/vyj2szvEhGWDvb+gG875bOGm8b8rlHBKOD1+nA3PcgC3fV6W1AU6pfOorPeBfH2X4mb9Boe97vHvaSndQvA==}
+    engines: {node: '>=12.0.0'}
+    peerDependencies:
+      '@mui/material': ^5.0.0
+      '@types/react': ^17.0.0 || ^18.0.0
+      react: ^17.0.0 || ^18.0.0
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+    dependencies:
+      '@babel/runtime': 7.18.9
+      '@mui/material': 5.9.3_ihaomijnambxwtysddndddrzzy
+      '@types/react': 18.0.15
+      react: 18.2.0
     dev: false
 
   /@mui/material/5.9.3_ihaomijnambxwtysddndddrzzy:
