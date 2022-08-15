@@ -7,7 +7,7 @@ type ImageBlockPropType = {
 export const ImageBlock = ({ images }: ImageBlockPropType) => {
   return (
     <Card>
-      <ImageList sx={{ width: 500, height: 450 }} cols={3} rowHeight={164}>
+      <ImageList sx={{ width: 500, height: 450 }} cols={2} rowHeight={164}>
         {images.map((item) => (
           <ImageListItem key={item.img}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
