@@ -2,7 +2,7 @@ import { ComponentMeta, ComponentStory } from "@storybook/react";
 import { ImageBlock as ImageBlockComponent } from "./ImageBlock";
 
 export default {
-  title: "ImageBlock Component",
+  title: "App Components/ImageBlock",
   component: ImageBlockComponent,
 } as ComponentMeta<typeof ImageBlockComponent>;
 

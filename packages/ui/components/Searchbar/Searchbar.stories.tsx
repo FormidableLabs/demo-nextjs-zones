@@ -2,7 +2,7 @@ import { ComponentMeta, ComponentStory } from "@storybook/react";
 import { Searchbar as SearchbarComponent } from "./Searchbar";
 
 export default {
-  title: "Test/Searchbar",
+  title: "App Components/Searchbar",
   component: SearchbarComponent,
 } as ComponentMeta<typeof SearchbarComponent>;
 
