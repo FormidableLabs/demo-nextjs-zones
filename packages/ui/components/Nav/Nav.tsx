@@ -1,25 +1,38 @@
 import * as React from "react";
-import { AppBar as MuiAppBar } from "@mui/material";
+import { AppBar as MuiAppBar, Box, Button, MenuItem } from "@mui/material";
 
-export const Nav = () => {
+type BasePath = "" | "/app" | "/admin";
+export type NavProps = {
+  renderLink: (linkProps: {
+    url: string;
+    children: React.ReactNode;
+    basePath: BasePath;
+  }) => React.ReactNode;
+};
+
+export const Nav = ({ renderLink }: NavProps) => {
   return (
-    <nav>
-      <MuiAppBar>
-        <ul>
-          <li>
-            <a href="/">Home</a>
-          </li>
-          <li>
-            <a href="/about">About</a>
-          </li>
-          <li>
-            <a href="/posts">Manage Posts</a>
-          </li>
-          <li>
-            <a href="/users">Manage users</a>
-          </li>
-        </ul>
-      </MuiAppBar>
-    </nav>
+    <MuiAppBar component="nav" position="sticky" sx={{ p: 2 }}>
+      <Box>
+        {PATHS.map(({ href, title, basePath }) => {
+          return renderLink({
+            url: href,
+            children: <Button variant="contained">{title}</Button>,
+            basePath,
+          });
+        })}
+      </Box>
+    </MuiAppBar>
   );
 };
+
+const PATHS: {
+  href: string;
+  title: string;
+  basePath: BasePath;
+}[] = [
+  { href: "/", title: "Home", basePath: "" },
+  { href: "/about/", title: "About", basePath: "" },
+  { href: "/app/", title: "Client App", basePath: "/app" },
+  { href: "/admin/", title: "Admin App", basePath: "/admin" },
+];
