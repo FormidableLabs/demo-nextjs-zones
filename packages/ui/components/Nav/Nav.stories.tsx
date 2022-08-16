@@ -7,7 +7,7 @@ export default {
 } as ComponentMeta<typeof NavComponent>;
 
 const Template: ComponentStory<typeof NavComponent> = (args) => (
-  <NavComponent />
+  <NavComponent renderLink={({ children }) => <a href="#">{children}</a>} />
 );
 
-export const Nav = NavComponent.bind({});
+export const Nav = Template.bind({});
