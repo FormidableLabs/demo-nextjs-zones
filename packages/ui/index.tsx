@@ -7,3 +7,4 @@ export * from "./components/CssBaseLine/CssBaseLine";
 export * from "./components/Paper/Paper";
 export * from "./components/Nav/Nav";
 export * from "./components/Container/Container";
+export * from "@mui/material";

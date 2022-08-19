@@ -1,8 +1,21 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import { Button } from "@mfezones/ui";
+import {
+  Box,
+  Button,
+  Container,
+  Divider,
+  Paper,
+  Stack,
+  Tab,
+  Tabs,
+  Typography,
+} from "@mfezones/ui";
+import { useState } from "react";
 
 const Home: NextPage = () => {
+  const [isRegistered, setIsRegistered] = useState(0);
+
   return (
     <div>
       <Head>
@@ -12,15 +25,68 @@ const Home: NextPage = () => {
       </Head>
 
       <main>
-        <h1>
-          Welcome to <a href="https://nextjs.org">Public App</a>
-        </h1>
-        <Button href="" variant="contained">
-          Client button!
-        </Button>
+        <Container>
+          <Stack
+            direction={"row"}
+            style={{ width: "100%" }}
+            divider={<Divider orientation="vertical" flexItem />}
+            justifyContent={"space-around"}
+          >
+            <Typography variant={"h6"}>
+              Welcome to <a href="https://nextjs.org">Public App</a>
+            </Typography>
+
+            <Paper elevation={6}>
+              <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
+                <Tabs
+                  value={isRegistered}
+                  onChange={(e, value) => setIsRegistered(value)}
+                  aria-label="Log in or register"
+                >
+                  <Tab label="Item One" value={0} />
+                  <Tab label="Item Two" value={1} />
+                </Tabs>
+              </Box>
+              <TabPanel value={isRegistered} index={0}>
+                Log in
+              </TabPanel>
+              <TabPanel value={isRegistered} index={1}>
+                Register
+              </TabPanel>
+              <Stack></Stack>
+            </Paper>
+          </Stack>
+        </Container>
       </main>
     </div>
   );
 };
 
 export default Home;
+
+interface TabPanelProps {
+  children?: React.ReactNode;
+  dir?: string;
+  index: number;
+  value: number;
+}
+
+function TabPanel(props: TabPanelProps) {
+  const { children, value, index, ...other } = props;
+
+  return (
+    <div
+      role="tabpanel"
+      hidden={value !== index}
+      id={`full-width-tabpanel-${index}`}
+      aria-labelledby={`full-width-tab-${index}`}
+      {...other}
+    >
+      {value === index && (
+        <Box sx={{ p: 3 }}>
+          <Typography>{children}</Typography>
+        </Box>
+      )}
+    </div>
+  );
+}
