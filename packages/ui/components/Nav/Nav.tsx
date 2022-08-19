@@ -1,5 +1,13 @@
 import * as React from "react";
-import { AppBar as MuiAppBar, Box, Button, MenuItem } from "@mui/material";
+import {
+  AppBar as MuiAppBar,
+  Box,
+  Button,
+  MenuItem,
+  Stack,
+  Toolbar,
+  Typography,
+} from "@mui/material";
 
 type BasePath = "" | "/app" | "/admin";
 export type NavProps = {
@@ -13,15 +21,30 @@ export type NavProps = {
 export const Nav = ({ renderLink }: NavProps) => {
   return (
     <MuiAppBar component="nav" position="sticky" sx={{ p: 2 }}>
-      <Box>
-        {PATHS.map(({ href, title, basePath }) => {
-          return renderLink({
-            url: href,
-            children: <Button variant="contained">{title}</Button>,
-            basePath,
-          });
-        })}
-      </Box>
+      <Toolbar>
+        <Typography
+          variant="h6"
+          component="div"
+          sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
+        >
+          Formidapets
+        </Typography>
+        <Box sx={{ display: { xs: "none", sm: "block" } }}>
+          <Stack direction="row" spacing={2}>
+            {PATHS.map(({ href, title, basePath }) => {
+              return renderLink({
+                url: href,
+                children: (
+                  <Button variant="contained" disableElevation>
+                    {title}
+                  </Button>
+                ),
+                basePath,
+              });
+            })}
+          </Stack>
+        </Box>
+      </Toolbar>
     </MuiAppBar>
   );
 };
