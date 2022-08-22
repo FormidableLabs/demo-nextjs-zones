@@ -18,7 +18,7 @@ const Home: NextPage = () => {
         <div>
           <Grid container spacing={2}>
             {dogs.map((dog) => (
-              <Grid item key={dog.imageUrl} xs={4}>
+              <Grid item key={dog.imageUrl} xs={12} sm={6} md={4}>
                 <DogCard
                   imageUrl={dog.imageUrl}
                   name={<Link href={`/dogs/${dog.name}`}>{dog.name}</Link>}
