@@ -1,5 +1,5 @@
-import { createStyles, CssBaseline as MuiCssBaseline } from "@mui/material";
-import { makeStyles } from "@mui/styles";
+import { CssBaseline as MuiCssBaseline } from "@mui/material";
+import { makeStyles, createStyles } from "@mui/styles";
 
 const useGlobalStyles = makeStyles(() =>
   createStyles({
