@@ -1,7 +1,6 @@
 import type { NextPage } from "next";
-import Link from "next/link";
 import Head from "next/head";
-import { Button } from "@mfezones/ui";
+import { Button, Typography } from "@mfezones/ui";
 
 const Home: NextPage = () => {
   return (
@@ -13,25 +12,15 @@ const Home: NextPage = () => {
       </Head>
 
       <main>
-        <h1>
-          Welcome to <a href="https://nextjs.org">Admin App</a>
-        </h1>
+        <Typography variant="h1" gutterBottom>
+          Admin Portal
+        </Typography>
+        <Typography gutterBottom sx={{ marginBottom: 4 }}>
+          A third, separate app stitched together with Zones.
+        </Typography>
 
-        <div>
-          <Link href="/users">
-            <a>
-              <h2>View and Manage Users</h2>
-            </a>
-          </Link>
-
-          <Link href="/posts">
-            <a>
-              <h2>View and Manage Posts</h2>
-            </a>
-          </Link>
-        </div>
-        <Button href="" variant="contained">
-          Admin button!
+        <Button href="/app" variant="contained">
+          Check out the pups!
         </Button>
       </main>
     </div>

@@ -1,5 +1,12 @@
 import type { AppProps } from "next/app";
-import { themes, ThemeProvider, CssBaseLine, Paper, Nav } from "@mfezones/ui";
+import {
+  themes,
+  ThemeProvider,
+  CssBaseLine,
+  Paper,
+  Nav,
+  Container,
+} from "@mfezones/ui";
 import Link from "next/link";
 
 function MyApp({ Component, pageProps }: AppProps) {
@@ -18,7 +25,9 @@ function MyApp({ Component, pageProps }: AppProps) {
             )
           }
         />
-        <Component {...pageProps} />
+        <Container>
+          <Component {...pageProps} />
+        </Container>
       </Paper>
     </ThemeProvider>
   );

@@ -1,9 +1,23 @@
 import React from "react";
+import { Typography } from "@mfezones/ui";
 
 const About = () => {
   return (
     <div>
-      <h1>We are about wholesome pets</h1>
+      <Typography variant="h1">About</Typography>
+      <Typography>
+        This site is a showcase of using Next.js Zones. For more details on this
+        exploration, check out{" "}
+        <a
+          href="https://github.com/FormidableLabs/showcase-nextjs-zones/"
+          target="_blank"
+          rel="noreferrer"
+          style={{ textDecoration: "underline" }}
+        >
+          the repo
+        </a>
+        .
+      </Typography>
     </div>
   );
 };
