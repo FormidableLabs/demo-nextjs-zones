@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import { Button } from "@mfezones/ui";
+import { Button, Grid, Typography } from "@mfezones/ui";
 
 const Home: NextPage = () => {
   return (
@@ -12,11 +12,15 @@ const Home: NextPage = () => {
       </Head>
 
       <main>
-        <h1>
-          Welcome to <a href="https://nextjs.org">Public App</a>
-        </h1>
-        <Button href="" variant="contained">
-          Client button!
+        <Typography variant="h1" gutterBottom>
+          Puppy pics!
+        </Typography>
+        <Typography gutterBottom sx={{ marginBottom: 4 }}>
+          This is just a playground to experiment with Next.js Zones.
+        </Typography>
+
+        <Button href="/app" variant="contained">
+          Check out the pups!
         </Button>
       </main>
     </div>

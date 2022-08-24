@@ -12,14 +12,22 @@ export type NavProps = {
 
 export const Nav = ({ renderLink }: NavProps) => {
   return (
-    <MuiAppBar component="nav" position="sticky" sx={{ p: 2 }}>
+    <MuiAppBar component="nav" position="sticky" sx={{ p: 2, color: "white" }}>
       <Box>
         {PATHS.map(({ href, title, basePath }) => {
-          return renderLink({
-            url: href,
-            children: <Button variant="contained">{title}</Button>,
-            basePath,
-          });
+          return (
+            <React.Fragment key={href}>
+              {renderLink({
+                url: href,
+                children: (
+                  <Button variant="text" color="inherit">
+                    {title}
+                  </Button>
+                ),
+                basePath,
+              })}
+            </React.Fragment>
+          );
         })}
       </Box>
     </MuiAppBar>

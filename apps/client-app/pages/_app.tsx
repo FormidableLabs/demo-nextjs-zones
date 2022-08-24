@@ -1,6 +1,12 @@
-import "../styles/globals.css";
 import type { AppProps } from "next/app";
-import { themes, ThemeProvider, CssBaseLine, Paper, Nav } from "@mfezones/ui";
+import {
+  Container,
+  CssBaseLine,
+  Nav,
+  Paper,
+  ThemeProvider,
+  themes,
+} from "@mfezones/ui";
 import Link from "next/link";
 
 function MyApp({ Component, pageProps }: AppProps) {
@@ -19,7 +25,9 @@ function MyApp({ Component, pageProps }: AppProps) {
             )
           }
         />
-        <Component {...pageProps} />
+        <Container>
+          <Component {...pageProps} />
+        </Container>
       </Paper>
     </ThemeProvider>
   );

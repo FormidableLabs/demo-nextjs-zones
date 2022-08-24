@@ -1,6 +1,8 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import { Button } from "@mfezones/ui";
+import { Button, DogCard, Grid } from "@mfezones/ui";
+import dogs from "@formidable/dogs";
+import Link from "next/link";
 
 const Home: NextPage = () => {
   return (
@@ -12,9 +14,20 @@ const Home: NextPage = () => {
       </Head>
 
       <main>
-        <h1>
-          Welcome to <a href="https://nextjs.org">Client App</a>
-        </h1>
+        <h1>Client app: check these dogs!</h1>
+        <div>
+          <Grid container spacing={2}>
+            {dogs.map((dog) => (
+              <Grid item key={dog.imageUrl} xs={12} sm={6} md={4}>
+                <DogCard
+                  imageUrl={dog.imageUrl}
+                  name={<Link href={`/dogs/${dog.name}`}>{dog.name}</Link>}
+                  description={dog.description}
+                />
+              </Grid>
+            ))}
+          </Grid>
+        </div>
         <Button href="" variant="contained">
           Client button!
         </Button>
