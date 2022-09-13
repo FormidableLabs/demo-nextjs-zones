@@ -6,10 +6,10 @@ const About = () => {
     <div>
       <Typography variant="h1">About</Typography>
       <Typography>
-        This site is a showcase of using Next.js Zones. For more details on this
+        This site is a demo of using Next.js Zones. For more details on this
         exploration, check out{" "}
         <a
-          href="https://github.com/FormidableLabs/showcase-nextjs-zones/"
+          href="https://github.com/FormidableLabs/demo-nextjs-zones/"
           target="_blank"
           rel="noreferrer"
           style={{ textDecoration: "underline" }}
